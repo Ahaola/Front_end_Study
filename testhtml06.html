@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格标签</title>
+</head>
+<body>
+    <!-- 
+       table 
+       border  边框粗细
+       width="300px" height="300px" 宽 高
+       align="left" 水平位置  默认left
+       right 右
+       center 水平居中
+
+     -->
+
+    <table border="1" width="300px" height="300px" align="center">
+        <!-- 行 -->
+        <tr>
+            <!-- 列 -->
+            <th>姓名</th>
+            <th>科目</th>
+            <th>成绩</th>
+        </tr>
+        <!-- 
+            水平位置
+            align="center" left 默认 right 右  center中
+            垂直位置
+            valign="top" 顶  bottom 底  middle 居中 默认
+         -->
+        <tr align="center" valign="middle">
+            <!-- 
+                td
+                rowspan 合并行
+                colspan 列合并
+                height="100px" 
+                width="100px"
+             -->
+            <td rowspan="2">张三</td>
+            <td>Java</td>
+            <td>80</td>
+        </tr>
+        <tr align="center">
+            
+            <td>html</td>
+            <td>90</td>
+        </tr>
+        <tr align="center">
+            <td height="100px" width="100px">李四</td>
+            <td>html</td>
+            <td>90</td>
+        </tr>
+        <tr align="center">
+            <td>备注</td>
+            <td colspan="2">张三同学表现不错</td>
+            
+        </tr>
+
+
+
+    </table>
+
+
+    
+</body>
+</html>

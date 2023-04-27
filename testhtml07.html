@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+</head>
+<body>
+    <!--表单标签
+        action  数据提交的地址
+        提交方式 get   post
+        get 将数据拼接在url后进行提交 不安全的 长度有限
+        post 将数据打包发送  安全的 长度无限的
+    -->
+    <form action="" method="post">
+        <!-- input
+            type  输入框的类型
+                text 文本
+                password 密码
+                submit 提交按钮
+            value="登录"
+        -->
+        <p>
+            输入用户名: <input type="text" value="登录" name="uname"/> 
+        </p>
+        
+        输入密码: <input type="password"  value="登录" name="pw"/> <br/>
+
+        <input type="submit" value="登录">
+
+
+    </form>
+
+
+    
+</body>
+</html>

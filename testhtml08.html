@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="get">
+
+        <!-- 单选按钮 
+            type="radio"
+            同一组单选按钮 必须有相同的name名称
+            value="男" 要提交值
+            checked 默认被选中
+        -->
+        <p>
+            男: <input type="radio" name="sex" value="1" />
+            女: <input type="radio" name="sex" value="2" checked/>
+        </p>
+
+
+        <p>
+            <!-- 多选按钮 
+                type="checkbox"
+                 同一 必须有相同的name名称
+                  value="1" 要提交值
+                checked 默认被选中
+
+            -->
+            睡觉 <input type="checkbox" name="like" value="1" checked/>
+            吃饭 <input type="checkbox" name="like" value="2" checked/>
+            玩游戏 <input type="checkbox" name="like" value="3"/>
+        </p>
+
+
+        <p>
+            <!-- 下拉列表
+            select name="city"
+            option value="1"
+                    selected 默认被选择
+            -->
+            <select name="city" >
+                <option value="1">太原</option>
+                <option value="2" selected>大同</option>
+                <option value="3">上海</option>
+            </select>
+
+        </p>
+
+        <p>
+            <!-- 文本域 -->
+            <textarea name="info" cols="50" rows="5">你好aaa</textarea>
+        </p>
+
+        <!-- 按钮 -->
+        <!-- 提交按钮 -->
+        <input type="submit" />
+        <!-- 重置按钮 -->
+        <input type="reset" value="clear"/>
+        <!-- 普通按钮 -->
+        <input type="button" value="按钮"/>
+        <!-- 图片按钮 -->
+        <input type="image" src="./imgs/02.png" width="30px" height="30px"/>
+
+    </form>
+</body>
+
+</html>

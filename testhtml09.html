@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <!-- 表单中的属性
+    input
+        maxlength  可输入的最大字符长度
+        size  input框的长度
+        disabled 禁用
+        placeholder 提示信息
+        required 必填
+        pattern 正则验证
+
+    -->
+
+    <form action="">
+        <p>
+            用户名: <input type="text" name="uname" maxlength="5" size="10" disabled/>
+        </p>
+        <p>
+            输入密码: <input type="password" name="pw" placeholder="请输入6位数数字" required pattern="^\d{6}$"/>
+        </p>
+
+        <!-- h5中 input框的类型 -->
+
+        <p>
+            邮箱类型: <input type="email" name="emi"/>
+            url: <input type="url" name="uu"/>
+            数字类型: <input type="number" name="nn" max="10" min="0" step="2"/>
+            日期类型: <input type="datetime-local" name="dd"/>
+
+        </p>
+        
+
+        <input type="submit" />
+
+
+    </form>
+
+</body>
+</html>

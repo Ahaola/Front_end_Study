@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本样式</title>
+    <style>
+        p{
+            /*  文本颜色 
+                颜色单词
+                十六进制 0~F
+                rgb() 0~255
+                rgba() 0~1 0 完全透明  1完全不透明
+            */
+            color: rgba(0,0,255,0.5);
+            /* 水平对齐方式 
+                left  默认
+                right 右
+                center 中
+            */
+            /* text-align: right; */
+
+            /* 首行缩进 */
+            text-indent: 2em;
+
+            /* 行高 */
+            line-height: 30px;
+            /* 文本修饰 
+            line-through 删除线
+            underline 下划线
+            overline 上划线
+            */
+            /* text-decoration: overline; */
+            /*阴影*/
+            text-shadow: red 0px 0px 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>
+        最佳的批量数量取决于许多因素：文档的大小和复杂度、索引和搜索的负载以及集群可用资源。
+        一种好的方式是批量处理 1,000 到 5,000 个文档，且总负载在 5 MB 到 15 MB。基于这个，你能尝试找到最佳的方式。
+    </p>
+
+</body>
+</html>
