@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            /*边框颜色
+            1个值 全部边框
+            2个值 上下  左右
+            3个值 上  左右  下
+            4个值 上 右 下 左
+            */
+            border-color: aqua red blue blanchedalmond;
+            /*边框类型*/
+            border-style: solid;
+            /*边框粗细*/
+            border-width: 13px 12px 14px 15px;
+            /*整体边框样式*/
+            border-style: red solid 12px;
+            /*上，下，左，右边框*/
+            border-top-width:1px;
+            border-bottom-color: aquamarine;
+            /*内边距*/
+            padding-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 20px;
+            /*内边距一个值代表所有方向都偏移xx*/
+            padding: 20px;
+        }
+        #d1{
+            /*外边距*/
+            margin-top: 15px;
+            margin-left: -20px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+        }
+        #d2{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        你好
+    </div>
+    <div id="d2">
+        hello
+    </div>
+</body>
+</html>

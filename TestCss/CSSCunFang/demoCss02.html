@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            /*盒子大小
+            content-box 定义的是内容大小 
+            border-box 盒子整体大小
+            */
+            width: 300px;
+            height: 300px;
+            box-sizing: border-box;
+            /*圆角边框*/
+            border-radius: 30px;
+            /*盒子水平居中*/
+            margin: 0 auto;
+            /*盒子阴影
+            inset 内阴影
+            颜色 x轴偏移  y轴偏移 模糊度
+            */
+            box-shadow: inset blue 2px 2px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        hello
+    </div>
+</body>
+</html>
