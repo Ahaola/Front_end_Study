@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羊了个羊</title>
+    <style>
+        .scene {
+            width: 500px;
+            height: 500px;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            margin: 0 auto;
+        }
+        .block {
+            width: 24px;
+            height: 24px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            float: left;
+        }
+        .choose{
+            width:350px;
+            height:50px;
+            border-left:1px solid red;
+            border-top:1px solid red;
+            margin:30px auto;
+        }
+        .item{
+            width:49px;
+            height:49px;
+            border-right:1px solid red;
+            border-bottom:1px solid red;
+            float:left;
+        }
+        .card{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+        .mask{
+            width: 50px;
+            height: 50px;
+            background-color: #000000ae;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+    </div>
+    <div class="choose">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <script>
+        //坐标系
+        let scene = document.querySelector(".scene");
+        let obj = {};
+        for (let i = 0; i < 20; i++) {
+            for (let j = 0; j < 20; j++) {
+                let block = document.createElement("div");
+                block.className = "block";
+                scene.appendChild(block);
+                obj[j+"-"+i] = block;
+            }
+        }
+        //叠加函数
+        function draw(level) {
+            let posarr = [];
+            for (let i = 0; i < 20; i++) {
+                posarr.push([]);
+                for (let j = 0; j < 20; j++) {
+                    posarr[i][j] = 0;
+                }
+            }
+            for (let i = level; i < 19 - level; i++) {
+                for (let j = level; j < 10; j++) {
+                    if (Math.random() < 0.2 && check(i, j, posarr)) {
+                        posarr[i][j] = 1;
+                        posarr[i][18 - j] = 1;
+                    }
+                }
+            }
+            for (let i = 0; i < 20; i++) {
+                for (let j = 0; j < 20; j++) {
+                    if (posarr[i][j] === 1) {
+                        let card = document.createElement("div");
+                        card.className = "card";
+                        card.style.zIndex = 10 - level;
+                        obj[j + "-" + i].appendChild(card);
+                        if (level > 1) {
+                            let mask = document.createElement("div");
+                            mask.className = "mask";
+                            mask.style.zIndex = 10 - level;
+                            obj[j + "-" + i].appendChild(mask);
+                        }
+                    }
+                }
+            }
+        }
+
+        for(let i=7;i>0;i--){
+            draw(i);
+        }
+        //判断重叠
+        function check(i, j, posarr) {
+            if (posarr[i][j - 1] || posarr[i - 1][j - 1] || posarr[i - 1][j] || posarr[i - 1][j + 1]) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
