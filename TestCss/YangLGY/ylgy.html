@@ -7,40 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>羊了个羊</title>
     <style>
+        body {
+            background-color: rgb(107, 234, 107);
+        }
+
         .scene {
             width: 500px;
             height: 500px;
-            border-top: 1px solid black;
-            border-left: 1px solid black;
             margin: 0 auto;
         }
+
         .block {
-            width: 24px;
-            height: 24px;
-            border-right: 1px solid black;
-            border-bottom: 1px solid black;
+            width: 25px;
+            height: 25px;
             float: left;
+            position: relative;
         }
-        .choose{
-            width:350px;
-            height:50px;
-            border-left:1px solid red;
-            border-top:1px solid red;
-            margin:30px auto;
+
+        .choose {
+            width: 357px;
+            height: 51px;
+            border-top: 1px solid red;
+            border-left: 1px solid red;
+            margin: 30px auto;
+
         }
-        .item{
-            width:49px;
-            height:49px;
-            border-right:1px solid red;
-            border-bottom:1px solid red;
-            float:left;
-        }
-        .card{
+
+        .item {
             width: 50px;
             height: 50px;
-            background-color: blue;
+            border-right: 1px solid red;
+            border-bottom: 1px solid red;
+            float: left;
+            position: relative;
+
         }
-        .mask{
+
+        .card {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-bottom: 3px solid #79887c;
+            box-shadow: 0 0 3px #000;
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .mask {
             width: 50px;
             height: 50px;
             background-color: #000000ae;
@@ -64,7 +82,7 @@
         <div class="item"></div>
     </div>
     <script>
-        //坐标系
+        // 坐标系的创建
         let scene = document.querySelector(".scene");
         let obj = {};
         for (let i = 0; i < 20; i++) {
@@ -72,11 +90,12 @@
                 let block = document.createElement("div");
                 block.className = "block";
                 scene.appendChild(block);
-                obj[j+"-"+i] = block;
+                obj[j + "-" + i] = block;
             }
         }
-        //叠加函数
-        function draw(level) {
+        // 创建卡片
+        let cardarr = []; //放置所有卡片的数组
+        function draw(level = 1) {
             let posarr = [];
             for (let i = 0; i < 20; i++) {
                 posarr.push([]);
@@ -84,13 +103,15 @@
                     posarr[i][j] = 0;
                 }
             }
+
             for (let i = level; i < 19 - level; i++) {
-                for (let j = level; j < 10; j++) {
+                for (let j = 1; j < 10; j++) {
                     if (Math.random() < 0.2 && check(i, j, posarr)) {
                         posarr[i][j] = 1;
                         posarr[i][18 - j] = 1;
                     }
                 }
+
             }
             for (let i = 0; i < 20; i++) {
                 for (let j = 0; j < 20; j++) {
@@ -99,28 +120,132 @@
                         card.className = "card";
                         card.style.zIndex = 10 - level;
                         obj[j + "-" + i].appendChild(card);
-                        if (level > 1) {
-                            let mask = document.createElement("div");
-                            mask.className = "mask";
-                            mask.style.zIndex = 10 - level;
-                            obj[j + "-" + i].appendChild(mask);
+                        cardarr.push(card);
+                        // if (level > 1) {
+                        //     let mask = document.createElement("div");
+                        //     mask.className = "mask";
+                        //     mask.style.zIndex = 10 - level;
+                        //     obj[j + "-" + i].appendChild(mask);
+                        // }
+                    }
+
+                }
+
+            }
+        }
+        for (let i = 7; i > 0; i--) {
+            draw(i);
+        }
+        // 把多余的卡片删除
+        let length = cardarr.length;
+        for (let i = 0; i < length % 3; i++) {
+            let card = cardarr.pop();
+            card.parentNode.removeChild(card);
+        }
+        function check(i, j, posarr) {
+            if (posarr[i][j - 1] || posarr[i - 1][j - 1] || posarr[i - 1][j] || posarr[i - 1][j + 1]) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        // scene.getboundingClientRect;
+        // scene.isSameElement;
+        // 渲染遮罩
+        function renderMask() {
+            let masks = document.querySelectorAll(".mask");
+            for (let i = 0; i < masks.length; i++)
+                masks[i].parentNode.removeChild(masks[i]);
+            for (let i = 0; i < cardarr.length; i++) {
+                let item = cardarr[i];
+                let rect = item.getBoundingClientRect();
+                let { x, y } = rect;
+                let one = document.elementFromPoint(x, y);
+                let two = document.elementFromPoint(x + 49, y);
+                let three = document.elementFromPoint(x, y + 49);
+                let four = document.elementFromPoint(x + 49, y + 49);
+                if (!(item.isSameNode(one) && item.isSameNode(two) && item.isSameNode(three) && item.isSameNode(four))) {
+                    let mask = document.createElement("div");
+                    mask.className = "mask";
+                    mask.style.zIndex = getComputedStyle(cardarr[i]).zIndex;
+                    cardarr[i].parentNode.appendChild(mask);
+                }
+                cardarr[i].index = i;
+            }
+        }
+        renderMask()
+        // 图片渲染
+        let imgarr = [];
+        for (let i = 0; i < cardarr.length / 3; i++) {
+            let n = Math.floor(Math.random() * 10);
+            imgarr.push(n);
+        }
+        let allimg = [...imgarr, ...imgarr, ...imgarr];
+        allimg.sort(function () {
+            if (Math.random() > 0.5) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        });
+        for (let i = 0; i < cardarr.length; i++) {
+            cardarr[i].style.backgroundImage = "url(" + allimg[i] + ".png)";
+            cardarr[i].n=allimg[i];
+        }
+        // 点击事件
+        let choosedarr = [];
+        let items = document.querySelectorAll(".item");
+        scene.onclick = function (e) {
+            if (e.target.className === "card") {
+                let item = e.target;
+                // 删除页面的卡片
+                item.parentNode.removeChild(item);
+                // 从cardarr当中也去进行删除
+                cardarr.splice(item.index, 1);
+                if(cardarr.length===0){
+                    alert("游戏成功");
+                    location.reload();
+                }
+                // 重新绘制所有的遮罩
+                renderMask();
+                // 将当前被删除的卡片对象添加到choosedarr中
+                if(choosedarr.length===7){
+                    alert("游戏失败");
+                    location.reload();
+                }
+                choosedarr.push(item);
+                choosedarr.sort((a,b)=>a.n-b.n);
+                let count={};
+                for(let i=0;i<choosedarr.length;i++){
+                    if(!count[choosedarr[i].n]){
+                        count[choosedarr[i].n]=1;
+                    }else{
+                        count[choosedarr[i].n]+=1;
+                    }
+                }
+                for(let i in count){
+                    if(count[i]===3){
+                        let length=choosedarr.length;
+                        for(let j=0;j<choosedarr.length;j++){
+                            if(choosedarr[j].n==i){
+                                choosedarr.splice(j,1);
+                                j--;
+                            }
                         }
                     }
+                }
+                // 向item中添加卡片标签
+                for(let i=0;i<items.length;i++){
+                    items[i].innerHTML="";
+                }
+                for (let i = 0; i < choosedarr.length; i++) {
+                    items[i].appendChild(choosedarr[i]);
                 }
             }
         }
 
-        for(let i=7;i>0;i--){
-            draw(i);
-        }
-        //判断重叠
-        function check(i, j, posarr) {
-            if (posarr[i][j - 1] || posarr[i - 1][j - 1] || posarr[i - 1][j] || posarr[i - 1][j + 1]) {
-                return false;
-            } else {
-                return true;
-            }
-        }
 
     </script>
 </body>
