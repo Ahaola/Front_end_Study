@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+        #d2{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            float: left;
+        }
+        #d3{
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            float: right;
+        }
+        #d11{
+            border: solid 3px;
+            /* 解决父边框塌陷问题 */
+            /* height: 400px; */
+            /* 溢出隐藏 */
+            /* overflow: hidden; */
+        }
+        /* 清除浮动 
+            left
+            right
+            both
+        
+        */
+        /* #d4{
+           clear: both; 
+        } */
+
+        #d11::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="d11">
+        <div id="d1">
+            1
+        </div>
+        <div id="d2">
+            2
+        </div>
+        <div id="d3">
+            3
+        </div>
+        <!-- <div id="d4"></div> -->
+    </div>
+   
+
+</body>
+</html>
