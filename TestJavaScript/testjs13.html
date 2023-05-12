@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期类</title>
+</head>
+
+<body>
+
+    <span id="s1">2023-5-11 14:15:20</span>
+
+    <script>
+        function getTime() {
+            //1.获取系统时间
+            var myDate = new Date();
+                //指定固定时间
+            //var myDate=new Date(2006,0,12,22,19,35); 
+
+            console.log(myDate);
+
+            //年
+            var y = myDate.getFullYear();
+            //月0-11
+            var m = myDate.getMonth() + 1;
+            //日
+            var d = myDate.getDate();
+            //时
+            var h = myDate.getHours();
+            //分
+            var mt = myDate.getMinutes();
+            //秒
+            var s = myDate.getSeconds();
+
+            var time = y + "-" + m + "-" + d + "  " + h + ":" + mt + ":" + s;
+
+            console.log(time);
+
+
+            //2.时间设置到span标签中
+            var s1 = document.getElementById("s1");
+            s1.innerHTML = time;
+        }
+        getTime();
+
+        //定时函数
+       // setInterval(getTime, 1000);
+
+    </script>
+
+</body>
+
+</html>

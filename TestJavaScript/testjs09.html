@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性设置</title>
+</head>
+<body>
+    <img src="../imgs/img1.png" alt="" id="im1">
+    <button onclick="changeimg()">按钮</button>
+</body>
+<script>
+    function changeimg(){
+        var im1=document.getElementById("im1");
+        console.log(im1);
+        //获取src
+        var src1=im1.getAttribute("src");
+        console.log(src1);
+        //设置src属性
+        im1.setAttribute("src","../imgs/img2.png");
+        im1.setAttribute("title","im1");
+   }
+</script>
+</html>

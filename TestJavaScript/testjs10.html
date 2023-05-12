@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素增删改查</title>
+    <style>
+        .u1c{
+            color: blue;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <ul id="u1" >
+        <li>111111</li>
+        <li>222222</li>
+        <li>3333333</li>
+        <li id="l4">44444444</li>
+        <li id="l5">5555555</li>
+    </ul>
+    <button onclick="add()">添加</button>
+    <button onclick="insert()">插入</button>
+    <button onclick="copy()">克隆</button>
+
+    <button onclick="del()">删除</button>
+
+    <button onclick="rep()">替换</button>
+
+    <button onclick="setStyle()">设置样式</button>
+
+    <button onclick="setClass()">设置样式2</button>
+
+    <button onclick="delClass()">删除class样式</button>
+</body>
+<script>
+    function add() {
+        //添加 给ul中添加一个li
+        var u1 = document.getElementById("u1");
+        //创建一个li
+        var li1 = document.createElement("li");
+        li1.innerHTML = "创建666666";
+        //li1添加到ul中
+        u1.appendChild(li1);
+
+
+    }
+
+
+    function insert(){
+        var l7 = document.createElement("li");
+        l7.innerHTML = "创建777";
+
+       var l5= document.getElementById("l5");
+
+
+       var u1 = document.getElementById("u1");
+
+       //将l7插入到l5 之前
+       u1.insertBefore(l7,l5);
+
+    }
+
+    function copy(){
+        var l4= document.getElementById("l4");
+        //元素的复制  true可以复制元素的子元素 false只复制元素
+        var li4= l4.cloneNode(true);
+
+        var u1 = document.getElementById("u1");
+
+        u1.appendChild(li4);
+
+
+    
+    }
+
+    function del(){
+        //父元素
+        var u1 = document.getElementById("u1");
+        //子元素
+        var l4= document.getElementById("l4");
+        //通过父元素删除子元素
+        u1.removeChild(l4);
+    }
+
+    function rep(){
+        //父元素
+        var u1 = document.getElementById("u1");
+        //要被替换的元素
+        var l5 = document.getElementById("l5");
+        //新元素
+        var li8=document.createElement("li");
+        li8.innerHTML="8888888";
+
+        u1.replaceChild(li8,l5);
+
+
+    }
+
+    function setStyle(){
+        var u1 = document.getElementById("u1");
+        //style 设置样式
+        u1.style.color="red";
+        u1.style.fontSize="30px";
+
+   
+    }
+
+    function setClass(){
+        var u1 = document.getElementById("u1");
+
+        u1.className="u1c";
+
+    }
+
+    function delClass(){
+        var u1 = document.getElementById("u1");
+
+        u1.className="";
+
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</html>

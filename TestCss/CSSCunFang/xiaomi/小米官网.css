@@ -1,0 +1,411 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#ee{
+    /* background-color: aqua; */
+    position: fixed;
+    top: 100px;
+    right: 0;
+    bottom: 300px;
+    display: block;
+    list-style: none;
+    /* border: 1px solid #f5f5f5; */
+}
+#ee>li{
+    border: 1px solid #f5f5f5;
+    /* margin: 0 auto; */
+    width: 84px;
+    height: 92px;
+}
+
+aa{
+    text-decoration: none;
+    color: #757575;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    padding-top: 50px;
+    
+}
+aa:hover{
+    color: #e16531;
+}
+#d1{
+    background-image: url(./image导航/手机.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;    
+}
+
+#d1>aa:hover{ 
+    background-image: url(./image导航/手机\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;
+    
+}
+#d2{
+    background-image: url(./image导航/个人中心.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;    
+}
+
+#d2>aa:hover{ 
+    background-image: url(./image导航/个人中心\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;
+    
+}
+#d3{
+    background-image: url(./image导航/售后服务\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;    
+}
+
+#d3>aa:hover{ 
+    background-image: url(./image导航/售后服务.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;
+    
+}
+#d4{
+    background-image: url(./image导航/人工客服.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;    
+}
+
+#d4>aa:hover{ 
+    background-image: url(./image导航/人工客服\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;
+    
+}
+#d5{
+    background-image: url(./image导航/24gf-cartFull3.png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;    
+}
+
+#d5>aa:hover{ 
+    background-image: url(./image导航/24gf-cartFull3\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position: center 3px;
+    
+}
+
+/* 轮播图 */
+#dd{
+    /* margin: 0 auto; */
+    width: 1226px;
+    height: 460px;
+    display: block;
+    
+    position: absolute;
+    top: 140px;
+    left: 146.5px;
+    
+}
+#left{
+    background: rgba(105,101,101,.6);
+    display: block;
+    width: 234px;
+    position: absolute;
+    top: 0;
+   
+    /* color: white; */
+    /* height: 420px; */
+    line-height: 42px;
+    
+    
+}
+ul{
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 420px;
+    
+}
+a{
+    color: white;
+    text-decoration: none;         
+    display: block;
+    font-size: 14px;
+    position: relative;
+    padding-left: 30px;
+    height: 42px;
+}
+
+ul>li>a:hover{              
+height: 42px;
+border: 1px solid #ff6700;
+background-color: #ff6700;               
+
+}
+
+ul>li>a>img{
+    display:block;
+    width: 16px;
+    height: 16px;
+    padding-left: 180px;
+    padding-top: 13px;
+    
+}
+
+div1{
+    display: block;
+    position:absolute;
+    top: 200px;
+    margin-left: 234px;
+}
+div1>a{
+    background-position: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 41px 45px;
+    background-image: url(./image导航/向左箭头.png);
+}
+div1>a:hover{
+    width: 10px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-image: url(./image导航/向左箭头\ \(1\).png);
+    opacity: 0.1;
+    background-color: black
+    /* background-color: black; */
+}
+
+div2{
+    display: block;
+    position:absolute;
+    top: 200px;
+    margin-left: 1178px;
+}
+div2>a{
+    background-position: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 41px 45px;
+
+    background-image: url(./image导航/向右箭头.png);
+}
+div2>a:hover{
+    width: 10px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-image: url(./image导航/向右箭头\ \(1\).png);
+    opacity: 0.1;
+    background-color: black
+    /* background-color: black; */
+}
+
+#pp ul{
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 410px;
+    
+}
+#pp ul li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    background: rgba(0,0,0,.4);           
+    border-color: rgba(0,0,0,.4);
+    border-radius: 50%;
+    margin-left: 8px;
+}
+#pp ul li a{
+    width: 10px;
+    height: 10px;
+    padding: 0px;
+}
+#pp ul li a:hover{
+    
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-color: rgba(0,0,0,.4);
+    border-radius: 50%;
+    padding: 0px;
+}
+
+/* 头部 */
+    #head{
+    display: block;
+    position: relative;
+    height: 40px;
+    background: #333;
+    }
+
+    #head ul{
+        margin-left: 146.5px;
+        display: block;
+        padding: 0px;
+        
+    }
+
+    #head ul li{
+        display: block;
+        float: left;
+        font-size: 12px;
+        margin: 0 .25em;
+        
+        
+    }
+    #head ul li a{
+        color: #b0b0b0;      
+        line-height: 40px;
+        font-size: 12px;
+        text-decoration: none;
+        font-family: sans-serif;
+        padding-left: 3px;
+    }
+    #head ul li a:hover{
+        color: white;
+        background: #333;
+        border-style: none;
+        height: auto;
+        width: auto;
+        padding-left: 3px;
+    }
+
+    #head #right1{
+        
+        display: block;
+        padding: 0px;
+        position: absolute;
+        top: 0;
+        right: 190px;
+    } 
+
+    #head #right1 li{
+        float: left;
+        display: block;
+        font-size: 12px;
+        margin: 0 .25em;
+    }
+    #head #right1 li a{
+        color: #b0b0b0;      
+        line-height: 40px;
+        font-size: 12px;
+        text-decoration: none;
+        font-family: sans-serif;
+        
+        padding: 0 5px;
+        text-align: center;
+    }
+    #head #right1 li a:hover{
+        color: white;
+    background: #333;
+    border-style: none;
+    height: auto;
+    width: auto;
+    
+}
+    #head #right1 #购物车21{
+        padding-left: 10px;
+    } 
+    #head #right1 li #购物车2{
+        background-image: url(./image导航/24gf-cartFull3.png);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: 0px 10px;
+        padding-left: 30px;
+    }
+    #head #right1 li #购物车2:hover{
+        background-image: url(./image导航/24gf-cartFull3\ \(1\).png);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-color: white;
+        color: #ff6700;
+    }
+
+    /* <!-- 第二行 --> */
+
+    #zhong2{
+        position: relative;
+        height: 100px;
+        display: block;
+        /* background-color: #b0b0b0; */
+    }
+
+    #left1{
+        
+        background: url(./image导航/小米.png)    no-repeat;
+        background-size: 56px;
+        position: absolute;
+        left: 146.5px;
+    top: 20px;
+    z-index: 1;
+    width: 56px;
+    height: 56px;
+    }
+
+    #left2 ul{
+    position: relative;
+    z-index: 10;
+    left: 330px;
+    width: 1100px;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 30px;
+    
+    list-style-type: none;
+    font-size: 16px;
+    /* display: block; */
+    }
+    #left2 ul li{
+    padding: 23px 2px 3px;
+    display: block;
+    
+    float: left;
+    }
+    
+    #left2 ul li a{
+    display: block;
+    color: #333;
+    font-size: 16px;
+    }
+    #left2 ul li a:hover{
+        width: auto;
+        height: auto;
+        background-color: white;
+        border-color: white;
+    }
+
+    #right2{
+    width: 223px;
+    height: 53px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 1100px;
+    }
+    #right2 form{
+        width: 223px;
+        height: 53px;
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 1100px;
+    }
+    #right2 #search{
+        width: 223px;
+        height: 53px;
+    border: 1px red ;
+    }
+
+    #right2 #search{
+    
+    }
+    

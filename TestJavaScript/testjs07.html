@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- js操作html -->
+    <p id="p1">你好js</p>
+    <p name="p2">你好js2</p>
+    <p >你好js3</p>
+
+    <script>
+        // getElementById 通过id获取元素
+       var p1= document.getElementById("p1");
+       console.log(p1);
+       //innerHTML 获得元素的内容
+    //var ph= p1.innerHTML;
+    //console.log(ph);
+    //给元素设置内容
+    p1.innerHTML="<h1>好好学习</h1>";
+
+    //通过名称获取元素
+    var p2=document.getElementsByName("p2");
+    console.log(p2);
+
+    //通过标签获取
+   var pp= document.getElementsByTagName("p");
+    console.log(pp);
+
+    
+
+   </script>
+
+</body>
+</html>

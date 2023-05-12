@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        #d1{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <!-- 点击事件 -->
+    <button onclick="aa()">按钮</button>
+    <!-- 鼠标移入事件 -->
+    <!-- <div id="d1" onmouseover="cc()" onmouseout="bb()"></div> -->
+    <!-- 键盘事件 -->
+    <input type="text" onkeydown="dd(event)"/>
+
+
+    <script>
+        function aa(){
+            alert("hello");
+        }
+
+        function bb(){
+            console.log("鼠标移出");
+        }
+
+        function cc(){
+            console.log("鼠标移入");
+        }
+
+        function dd(e){
+            //键盘编码
+            console.log("按下"+e.keyCode);
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运算符</title>
+</head>
+<script>
+// 运算符
+/*
+注意：运算符将其他类型转化为数字后再运算，无法转化则结果为NaN
+
+- true 转化为1
+- false、null转化为0
+- undefined 无法转化
+*/
+//算术运算符 + - * / % ++ --
+/*
++ 1. 加法运算
+2. 如果操作数为字符串时起到连接作用
+
+++ 自增1
+-- 自减1
+    ++|-- 在前 先自增|自减 再进行运算
+            在后  先运算再自增|自减
+*/
+//关系运算符 > < >= <= == != === !==
+/*
+    ​	`NaN`与任意数据比较结果均为 false
+    字符串和字符串比较, 比较第一个字符的unicode编码值，第一个字符要是相同，就比较第二个，依次往下(ASCII码表在最末尾)
+    == 比较值
+    === 值和数据类型都比较
+
+ */
+//逻辑运算符  && || ! 操作数为布尔类型或数值类型
+/*
+    且  1个为假及为假   
+    或  1个为真及为真
+    ! 假是真 真是假
+*/
+
+//赋值运算符 = += -= /= %= *=
+
+
+//三目条件运算符 x?y:z
+
+var a=12;
+var b=13;
+
+var c= "你好"-1; 
+console.log(c);
+
+var d=3;
+
+var e=1+ d++;
+console.log(e); //4
+
+var a1="100001";
+var b1="2";
+var c1= a1>b1;
+console.log(c1);
+
+var aa1=12;
+var bb1="12";
+
+console.log(aa1!==bb1);
+
+console.log("--------------");
+//逻辑运算符 & | !
+
+var a2=3<2;
+var b2=3>2;
+
+console.log(a2&&b2);
+
+var a3=12;
+
+a3-=3; //a3=a3+3;
+
+console.log(a3);
+
+var max=1>2?3:2;
+
+console.log(max);
+
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+
+
+
+    
+</body>
+</html>

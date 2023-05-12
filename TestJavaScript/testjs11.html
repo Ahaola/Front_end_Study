@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象类型</title>
+</head>
+<body>
+    <script>
+        var aa=12;
+        //万事万物皆对象
+        var car={
+            //属性 静态特征
+            name:"宝马",
+            color:"白色",
+            //函数 功能  动态特征
+            move: function (){
+                console.log("移动");
+            }
+        }
+
+        console.log(typeof car);
+        console.log(car.name);
+        console.log(car.color);
+        car.move();
+
+    </script>
+</body>
+</html>

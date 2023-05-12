@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //数组
+        var aa=12;
+        //一个变量存多个数据
+        //数组的定义
+        //var scores=new Array(5);
+       // var scores=new Array();
+        //数组赋值  scores[0]=12; 下标从0 开始
+
+        // scores[0]=12;
+        // scores[1]=13;
+        // scores[2]=14;
+        // scores[3]=15;
+        // scores[4]=16;
+
+        //var scores=new Array(12,13,14,15,16);
+
+        var scores=[13,12,15,16,14,17];
+
+        console.log(scores);
+
+        //数组取值 数组名[下标]
+        var ss=scores[4];
+        console.log(ss);
+
+        //常用属性和方法
+        console.log(typeof scores);
+        //属性 获取数据的元素个数
+       var scoresnum= scores.length;
+       console.log(scoresnum);
+
+       //函数 自然顺序排序
+       var so= scores.sort();
+       console.log(so);
+
+       // 将数组变成字符串 用$符连接
+       var s1= scores.join("$");
+       console.log(s1);
+       console.log(typeof s1);
+
+       //添加元素 返回元素个数
+       var nn= scores.push(20);
+
+       console.log(nn);
+       console.log(scores);
+
+
+    //数组遍历
+    for(var i=0;i<scores.length;i++){
+        var si=scores[i];
+        console.log(si);
+    }
+    console.log("------------------");
+    //遍历2  i 下标   scores 数组名 
+    for (var i in scores) {
+        var si2= scores[i];
+        console.log(si2);
+    }
+
+    console.log("------------------3");
+    //遍历3 sc 数组中元素  scores 数组
+    for (var sc of scores) {
+        console.log(sc);
+    }
+
+
+    </script>
+
+
+</body>
+</html>

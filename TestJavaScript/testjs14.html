@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            border: red solid 1px;
+        }
+    </style>
+</head>
+<script src="../js/echarts.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script> -->
+
+<body>
+
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: 400px;height:400px;"></div>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        option = {
+            legend: {
+                textStyle: {
+                    color: "rgba(159, 32, 32, 1)"
+                }
+            },
+            tooltip: {},
+            dataset: {
+                source: [
+                    ['product', '营业同比', '企业同比', '行业同比'],
+                    ['T1', 43.3, 93.7, 93.7],
+                    ['T2', 83.1, 73.4, 55.1],
+                    ['T3', 86.4, 65.2, 82.5],
+                    ['T4', 72.4, 53.9, 39.1]
+                ]
+            },
+            xAxis: {
+                type: 'category',
+                //轴线
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: "rgba(201, 37, 37, 1)"
+                    }
+                },
+                //刻度线
+                axisTick: {
+                    show: false
+                }
+            },
+            yAxis: {
+                splitLine: {
+                    lineStyle: {
+                        color: "rgba(218, 37, 37, 1)"
+                    }
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: "rgba(214, 50, 50, 1)"
+                    }
+                }
+            },
+            // Declare several bar series, each will be mapped
+            // to a column of dataset.source by default.
+            series: [
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        // borderColor: "rgba(211, 50, 50, 1)",
+                        color: "rgba(204, 49, 49, 1)"
+                    }
+                },
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        // borderColor: "rgba(211, 50, 50, 1)",
+                        color: "#ffe18f"
+                    }
+                },
+                {
+                    type: 'bar',
+                    itemStyle: {
+                        // borderColor: "rgba(211, 50, 50, 1)",
+                        color: "#00ffff"
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

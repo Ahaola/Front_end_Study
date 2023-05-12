@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //流程控制语句
+        // 顺序结构  选择结构  循环结构
+        //选择结构
+        //单条件
+        var score=65;
+        // if(score>90){
+        //     console.log("奖励100");
+        // }
+
+       
+
+        //双条件
+        // if(score>90){
+        //     console.log("奖励100");
+        // }else{
+        //     console.log("值日一周");
+        // }
+        
+        //多条件
+
+        // if(score>90){
+        //     console.log("奖励100");
+        // }else if(score>80&&score<=90){
+        //     console.log("奖励50");
+        // }else if(score>60&&score<=80){
+        //     console.log("没奖励");
+        // }else{
+        //     console.log("值日一周");
+        // }
+        // console.log("继续努力");
+
+        if(score>=90){
+            console.log("奖励100");
+        }else if(score>=80){
+            console.log("奖励50");
+        }else if(score>=60){
+            console.log("没奖励");
+        }else{
+            console.log("值日一周");
+        }
+        console.log("继续努力");
+        
+        //用做等值判断
+        var num=6;
+        switch(num){
+            case 1:;
+          
+            case 2:;
+            case 3:;
+            case 4:;
+            case 5:console.log("学习");
+            break;
+            case 6:;
+            case 7:console.log("休息"); 
+            break;
+            default : console.log("输入有问题");
+              
+        }
+
+        //循环结构  while  do-while  for
+        //while  do-while 区别 while先判断在执行  dowhile先执行再判断
+        // false  do-while 都会执行一次
+        //循环体 循环结束条件
+        var count=1;
+        // while(count<=10){
+        //     console.log("跑圈"+count); 
+        //     count++;
+        // }
+
+        // do {
+        //     console.log("跑圈"); 
+            
+        // } while (false);
+
+        //for 1. 初始值 2.循环条件 3.步进
+        /*
+        一般用作循环次数固定的情况下
+        */
+        for(var count2=1;count2<=10;count2++){
+            console.log("跑圈"+count2); 
+        }
+     
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
