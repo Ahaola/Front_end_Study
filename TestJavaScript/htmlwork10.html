@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .bigbox{
+	        width: 1920px;
+	        height: 1080px;
+            /* background-color: aqua; */
+            background-image: url(../images/indexImg/bg1.png);
+            background-size: 1920px 1080px;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            position: relative;
+        }
+        .head1{
+            width: 1797px;
+            height: 102px;
+            position: absolute;
+            top:32px;
+            left: 60px;
+            background-image: url(../images/indexImg/导航.png);
+            background-size: 1797px 102px;
+            background-repeat: no-repeat;
+        }
+
+        .bd1{
+            /* background-color: brown; */
+            width: 1065px;
+            height: 958px;
+            background-image: url(../images/indexImg/大边框@2x.png);
+            background-repeat: no-repeat;
+            background-size: 1081px 958px;
+            background-position: -15px 5px;
+            position: absolute;
+            left: 0;
+            top: 111px;
+            opacity: 0.9;
+
+          }  
+        .bd2{
+            width: 988px;
+	        height: 940px;
+            position: absolute;
+            left: 932px;
+            top: 125px;
+        }
+        .bd21{
+            width: 610px;
+	        height: 393px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /* background-color: aqua; */
+            background-image: url(../images/indexImg/小边框1-2.png);
+            background-repeat: no-repeat;
+            background-size: 610px 393px;
+            background-position: 0 10px;
+            /* opacity: 0.5; */
+        }
+        .bd22{
+            width: 546px;
+	        height: 394px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: url(../images/indexImg/小边框1-2@2x.png);
+            background-repeat: no-repeat;
+            background-size: 610px 394px;
+            background-position: 0 10px;
+            /* opacity: 0.5; */
+            
+        }
+        .bd23{
+            width: 588px;
+	        height: 566px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-image: url(../images/indexImg/小边框3-4.png);
+            background-repeat: no-repeat;
+            background-size: 588px 566px;
+            background-position: -7px 15px;
+            /* opacity: 0.5; */
+        }
+        .bd24{
+            width: 544px;
+	        height: 561px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-image: url(../images/indexImg/小边框3-4.png);
+            background-repeat: no-repeat;
+            background-size: 588px 566px;
+            background-position: -7px 10px;
+            /* opacity: 0.5; */
+        }
+     
+        .head1>h2{
+            width: 513px;
+            height: 34px;
+            position: absolute;
+            top: 31px;
+            left: 28px;
+            font-family: MFJianHei_Noncommercial-Regular;
+            font-size: 34px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .head11{
+            width: 310px;
+            height: 29px;
+            border: solid 1px #0076c8;
+            position: absolute;
+            top: 7px;
+            left: 573px;
+        }
+        .head111{
+            width: 228px;
+            height: 14px;
+            font-family: PingFang-SC-Bold;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            padding: 0;
+            letter-spacing: 1px;
+            color: #ffffff;
+            margin: 8px auto;
+        }
+        .head1>h3{
+            width: 251px;
+            height: 14px;
+            font-family: PingFang-SC-Heavy;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 16px;
+            letter-spacing: 2px;
+            color: #ffffff;
+            position: absolute;
+            top: 15px;
+            right: 465px;
+        }
+
+        .head-8{
+            position: absolute;
+            top: 56px;
+            left: 555px;
+        }
+        
+        .head-8>li{
+            list-style: none;
+            width: 135px;
+            height: 43px;
+            float: left;
+            /* background-color: red; */
+            margin-left: 0;
+            margin-right: 4px;
+            background-image: url(../images/indexImg/未选中.png);
+        }
+        .head-8>li:nth-of-type(1){
+            width: 135px;
+            height: 43px;
+            background-image: url(../images/indexImg/选中.png);
+        }
+        .head-8>li>p{
+            width: 76px;
+	        height: 17px;
+            font-family: PingFang-SC-Bold;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #ffffff;
+            line-height: 18px;
+            margin-top: 13px;
+            margin-left: 30px;
+        }
+        .head1-right{
+            width: 398px;
+	        height: 94px;
+            position: absolute;
+            top: 9px;
+            right: 23px;
+        }
+        .head1-right>div{
+            width: 109px;
+            height: 27px;
+            background-repeat: no-repeat;
+            float: left;
+            margin-right: 23px;
+            background-position: 0;
+        }
+        .head1-right>div>h4{
+            width: 73px;
+            height: 16px;
+            font-family: PingFang-SC-Bold;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 27px;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-left: 30px;
+        }
+
+        .head1-right>div:nth-of-type(1){
+            background-image: url(../images/indexImg/切换.png);
+            background-size: 26px;
+        }
+        .head1-right>div:nth-of-type(2){
+            background-image: url(../images/indexImg/设置.png);
+            background-size: 27px 26px;
+
+        }
+        .head1-right>div:nth-of-type(3){
+            background-image: url(../images/indexImg/退出.png);
+            background-size: 23px;
+        }
+        .bd1>h2{
+            width: 176px;
+            height: 22px;
+            font-family: PingFang-SC-Bold;
+            font-size: 22px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #ffffff;
+            position: absolute;
+            top: 60px;
+            left: 386px;
+        }
+        .bd21>img:nth-of-type(1),.bd22>img{
+            width: 348px;
+	        height: 9px;
+            position: absolute;
+            top: 80px;
+            left: 102px;
+            opacity: 1;
+        }
+        .bd23>img,.bd24>img:nth-of-type(1){
+            width: 348px;
+	          height: 9px;
+            position: absolute;
+            top: 98px;
+            left: 109px;
+        }
+        .bd24>img:nth-of-type(2){
+          position: absolute;
+          bottom: -55px;
+          left: 20px;
+        }
+
+        .sbd21{
+            width: 130px;
+            height: 24px;
+            position: absolute;
+            top: 59px;
+            left: 110px;
+            background-image: url(../images/indexImg/行业格局.png);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: 0;
+        }
+        .sbd22{
+            width: 130px;
+            height: 24px;
+            position: absolute;
+            top: 59px;
+            left: 110px;
+            background-image: url(../images/indexImg/行业趋势.png);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: 0;
+        }
+
+        .sbd21>h5,.sbd22>h5,.sbd23>h5,.sbd24>h5{
+            width: 130px;
+            height: 21px;
+            font-family: PingFang-SC-Regular;
+            font-size: 22px;
+            letter-spacing: 0px;
+            color: #83bdeb;
+            line-height: 24px;
+            margin-left: 41px;
+        }
+        .sbd23{
+            width: 150px;
+            height: 24px;
+            position: absolute;
+            top: 75px;
+            left: 108px;
+            background-image: url(../images/indexImg/能力排名.png);
+            background-size: 91px;
+            background-repeat: no-repeat;
+            background-position: -28px;
+        }
+        .sbd24{
+            width: 160px;
+            height: 26px;
+            position: absolute;
+            top: 75px;
+            left: 108px;
+            background-image: url(../images/indexImg/矩阵.png);
+            background-size: 26px;
+            background-repeat: no-repeat;
+            background-position: 0;
+        }
+        #center-circle{
+            width: 478px;
+            height: 466px;
+            /* opacity: 0.9; */
+            position: absolute;
+            top: 189px;
+            left: 185px;
+            /* border: red 2px solid; */
+            background-image: url(../images/indexImg/地球.png);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: 330px;
+        }
+        #l-leida{
+            width: 163px;
+	        height: 90px;
+            /* opacity: 0.6; */
+
+            background-image: url(../images/indexImg/底座.png);
+            background-repeat: no-repeat;
+            background-position: center 0px;
+            margin-bottom: 20px;
+        }
+        .bd1>div:nth-of-type(2){
+            position: absolute;
+            top: 174px;
+            left: 436px;
+        }
+        .bd1>div:nth-of-type(3){
+            position: absolute;
+            top: 234px;
+            left: 163px;
+        }
+        .bd1>div:nth-of-type(4){
+            position: absolute;
+            top: 482px;
+            left: 72px;
+        }
+        .bd1>div:nth-of-type(5){
+            position: absolute;
+            top: 715px;
+            left: 120px;
+        }
+        .bd1>div:nth-of-type(6){
+            position: absolute;
+            top: 786px;
+            left: 436px;
+        }
+        .bd1>div:nth-of-type(7){
+            position: absolute;
+            top: 724px;
+            left: 702px;
+        }
+        .bd1>div:nth-of-type(8){
+            position: absolute;
+            top: 481px;
+            left: 788px;
+        }.bd1>div:nth-of-type(9){
+            position: absolute;
+            top: 234px;
+            left: 702px;
+        }
+      
+        #l-leida1{
+            width: 220px;
+            height: 117px;
+            position: absolute;
+            top: 107px;
+            left: 406px;
+        }
+        #l-leida2{
+            width: 217px;
+            height: 160px;
+            position: absolute;
+            /* border: red 1px solid; */
+            top: 145px;
+            left: 134px;
+        }
+        #l-leida3{
+            width: 220px;
+            height: 150px;
+            position: absolute;
+            /* border: red 1px solid; */
+            top: 405px;
+            left: 40px;
+        }
+        #l-leida4{
+            width: 200px;
+            height: 150px;
+            position: absolute;
+            /* border: red 1px solid; */
+            bottom: 180px;
+            left: 100px;
+        }
+        #l-leida5{
+            width: 220px;
+            height: 141px;
+            position: absolute;
+            /* border: red 1px solid; */
+            top: 710px;
+            left: 407px;
+        }
+        #l-leida6{
+            width: 220px;
+            height: 141px;
+            position: absolute;
+            /* border: red 1px solid; */
+            bottom: 165px;
+            left: 674px;
+        }
+        #l-leida7{
+            width: 200px;
+            height: 160px;
+            /* border: red 1px solid; */
+            position: absolute;
+            top: 400px;
+            right: 96px;
+        }#l-leida8{
+            width: 220px;
+            height: 145px;
+            position: absolute;
+            top: 165px;
+            left: 671px;
+        }
+        #l-leida9{
+            width: 485px;
+            height: 361px;
+            position: absolute;
+            top: 315px;
+            left: 265px;
+        }
+        .bd1>img{
+          position: absolute;
+          left: 0;
+          bottom: -40px;
+        }
+        .bd1>ul{
+          width: 217px;
+          height: 85px;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0px;
+          color: #ffffff;
+          position: absolute;
+          bottom: 80px;
+          left: 92px;
+        }
+        .bd1>ul>li{
+          margin-bottom: 4px;
+        }
+        #bd22-tu{
+          width: 320px;
+          height: 260px;
+          position: absolute;
+          top: 120px;
+          left: 105px;
+        }
+        #bd21-tu{
+          width: 300px;
+          height: 250px;
+          /* border: red 1px solid; */
+          position: absolute;
+          top: 120px;
+          left: 120px;
+        }
+        #bd21-tu>img{
+          position: absolute;
+          bottom: 10px;
+          left: 14%;
+        }
+        #bd23-tu,#bd24-tu{
+          width: 350px;
+          height: 370px;
+          position: absolute;
+          /* border: red 1px solid; */
+        }
+        #bd23-tu{
+          top: 140px;
+          right: 135px;
+        }
+        #bd24-tu{
+          top: 116px;
+          right: 90px;
+        }
+        .bd21>img:nth-of-type(2){
+            position: absolute;
+            bottom: 25px;
+            left: 155px;
+        }
+
+       
+    </style>
+    <link rel="stylesheet" href="../jswork/htmlwork10.js">
+</head>
+<script src="../jswork/echarts.min.js"></script>
+<body>
+    <div class="bigbox">
+        <div class="head1">
+                <h2>深航电企业评价评级系统EERS</h2>
+                <div class="head11">
+                    <p class="head111">北京航为高科连接技术有限公司</p>
+                </div>
+                <h3 id="s1">2023-05-09   16:00:00</h3>
+                <ul class="head-8">
+                    <li><p>企业评价</p> </li>
+                    <li><p>财务评价</p> </li>
+                    <li><p>行业分析</p> </li>
+                    <li><p>财务情况</p> </li>
+                    <li><p>财务比率</p> </li>
+                    <li><p>杜邦分析</p> </li>
+                    <li><p>资产负债</p> </li>
+                    <li><p>经营质量</p> </li>
+                </ul>
+                <div class="head1-right">
+                        <div><h4>切换界面</h4></div>
+                        <div><h4>基础设置</h4></div>
+                        <div><h4>退出登录</h4></div>
+                </div>
+        </div>
+
+
+        <div class="bd1">
+            <h2>企业经济能力评价</h2>
+            <div id="center-circle"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida"></div>
+            <div id="l-leida1"></div>
+            <div id="l-leida2"></div>
+            <div id="l-leida3"></div>
+            <div id="l-leida4"></div>
+            <div id="l-leida5"></div>
+            <div id="l-leida6"></div>
+            <div id="l-leida7"></div>
+            <div id="l-leida8"></div>
+            <div id="l-leida9"></div>
+            <img src="../images/indexImg/大底座.png" alt="">
+            <ul>
+              <li>当前</li>
+              <li>总分: 42.29(满分60)</li>
+              <li>均分: 7.05</li>
+            </ul>
+        </div>
+
+        <div class="bd2">
+            <div class="bd21">
+                <img src="../images/indexImg/装饰.png" alt="">
+                <div class="sbd21">
+                    <h5>行业格局</h5>
+                </div>
+                <img src="../images/indexImg/圆底座.png" alt="">
+                <div id="bd21-tu"></div>
+            </div>
+            <div class="bd22">
+                <img src="../images/indexImg/装饰.png" alt="">
+                <div class="sbd22">
+                    <h5>行业趋势</h5>
+                </div>
+                <div id="bd22-tu"></div>
+            </div>
+            <div class="bd23">
+                <img src="../images/indexImg/装饰@2x.png" alt="">
+                <div class="sbd23">
+                    <h5>能力排名</h5>
+                </div>
+                <div id="bd23-tu"></div>
+            </div>
+            <div class="bd24">
+                <img src="../images/indexImg/装饰@2x.png" alt="">
+                <div class="sbd24">
+                    <h5>Space矩阵</h5>
+                </div>
+                <img src="../images/indexImg/大底座1.png" alt="">
+                <div id="bd24-tu"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../jswork/htmlwork10.js"></script>
+<script>
+     function getTime() {
+            //1.获取系统时间
+            var myDate = new Date();
+            console.log(myDate);
+
+            //年
+            var y = myDate.getFullYear();
+            //月0-11
+            var m = myDate.getMonth() + 1;
+            //日
+            var d = myDate.getDate();
+            //时
+            var h = myDate.getHours();
+           
+            //分
+            var mt = myDate.getMinutes();
+            //秒
+            var s = myDate.getSeconds();
+
+            if(s<=9){
+              var time = y + "-" + m + "-" + d + "  " + h + ":" + mt + ":" +"0"+ s;
+            }else if(mt<=9){
+              var time = y + "-" + m + "-" + d + "  " + h + ":" +"0"+ mt + ":" + s;
+            }else if(h<=9){
+                var time = y + "-" + m + "-" + d + "  " +"0"+ h + ":" + mt + ":" +s;
+            }else if(d<=9){
+                var time = y + "-" + m + "-" +"0"+ d + "  " + h + ":" + mt + ":" +s;
+            }else if(m<=9){
+                var time = y + "-" +"0"+ m + "-" + d + "  " + h + ":" + mt + ":" +s;
+            }else{
+                var time = y + "-" + m + "-" + d + "  " + h + ":" + mt + ":" +s;
+            }
+
+            console.log(time);
+
+            //2.时间设置到span标签中
+            var s1 = document.getElementById("s1");
+            s1.innerHTML = time;
+        }
+        getTime();
+        //定时函数
+        setInterval(getTime, 1000);
+        myChart.setOption(option);
+
+        
+</script>
+</html>
